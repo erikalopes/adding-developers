@@ -1,0 +1,23 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "Back-end of the project \"CRUD of programmers - Afiliart\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "afiliart",
+    "crud",
+    "mongodb",
+    "node",
+    "nodejs",
+    "express"
+  ],
+  "author": "Erika Lopes",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.3"
+  }
+}
