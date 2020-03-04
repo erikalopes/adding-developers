@@ -1,0 +1,81 @@
+<div class="row justify-content-center">
+  <div class="col-md-4 register-employee">
+    <!-- form card register -->
+    <div class="card card-outline-secondary">
+      <div class="card-header">
+        <h3 class="mb-0">Edit Employee</h3>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+
+          <div class="form-group">
+            <label for="inputName">Nome</label>
+            <input class="form-control" type="text" formControlName="name">
+            <!-- error -->
+            <div class="invalid-feedback" *ngIf="submitted && myForm.name.errors?.required">
+              Nome é obrigatório
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label for="inputEmail3">Email</label>
+            <input class="form-control" type="text" formControlName="email">
+            <!-- error -->
+            <div class="invalid-feedback" *ngIf="submitted && myForm.email.errors?.required">
+              Informe seu email
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="inputEmail3">Linkedin</label>
+            <input class="form-control" type="text" formControlName="linkedin">
+            <!-- error -->
+          </div>
+          <div class="form-group">
+            <label for="inputEmail3">Cidade</label>
+            <input class="form-control" type="text" formControlName="city">
+            <!-- error -->
+          </div>
+          <div class="form-group">
+            <label for="inputEmail3">Estado</label>
+            <input class="form-control" type="text" formControlName="state">
+            <!-- error -->
+          </div>
+
+          <div class="form-group">
+            <label for="inputPassword3">Em qual turno você estuda?</label>
+            <select class="custom-select form-control" (change)="updateProfile($event.target.value)"
+              formControlName="designation">
+              <option value="">Escolha...</option>
+              <option *ngFor="let employeeShift of EmployeeShift" value="{{employeeShift}}">{{employeeShift}}
+              </option>
+            </select>
+            <!-- error -->
+            <div class="invalid-feedback" *ngIf="submitted && myForm.designation.errors?.required">
+              Escolha o turno que você estuda
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label for="inputVerify3">Número de Telefone</label>
+            <input class="form-control" type="text" formControlName="phoneNumber">
+            <!-- error -->
+            <div class="invalid-feedback" *ngIf="submitted && myForm.phoneNumber.errors?.required">
+              Informe seu número de telefone
+            </div>
+            <div class="invalid-feedback" *ngIf="submitted && myForm.phoneNumber.errors?.pattern">
+              Informe apenas números
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <button class="btn btn-success btn-lg btn-block" type="submit">Atualizar</button>
+          </div>
+        </form>
+      </div>
+    </div><!-- form  -->
+  </div>
+</div>
