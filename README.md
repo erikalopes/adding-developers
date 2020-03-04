@@ -9,6 +9,7 @@
   - Antes de rodar a aplicação, instale o:
     - [Node.js](https://nodejs.org/)
     - [Angular](https://cli.angular.io/)
+    - [MongoDB](https://www.mongodb.com/download-center/community) 
 
 
 #### Instalação
@@ -29,7 +30,11 @@ npm install
 ```sh
 ng serve
 ```
-4. Abra um novo terminal, e entre no diretório (adding-developers > backend) e rode no terminal:
+4. Para iniciar o MongoDB, abra um terminal e rode:
+```sh
+mongod
+```
+5. Abra um novo terminal, e entre no diretório (adding-developers > backend) e rode no terminal:
 ```sh
 node server.js
 ```
