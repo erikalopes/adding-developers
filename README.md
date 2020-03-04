@@ -1,4 +1,4 @@
-# CRUD, Adicionando programadores - Afliart
+# CRUD, Adicionando programadores - Afiliart
 
   -  A aplicação está dividida em 2 partes, frontend e backend.
   - A aplicação permite cadastar, listar, atualizar e deletar programadores
