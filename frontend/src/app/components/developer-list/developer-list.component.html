@@ -1,8 +1,8 @@
-<div class="container">
+<div>
   <!-- No data message -->
   <p *ngIf="Employee.length <= 0" class="no-data text-center">A lista por enquanto estar vazia, experimente adicionar um!</p>
 
-  <!-- Employee list -->
+  <!-- dev list -->
   <table class="table table-bordered" *ngIf="Employee.length > 0">
     <thead class="table-success">
       <tr>
@@ -13,6 +13,12 @@
         <th scope="col">Contato</th>
         <th scope="col">Cidade</th>
         <th scope="col">Estado</th>
+        <th scope="col">Turno</th>
+        <th scope="col">NodeJS</th>
+        <th scope="col">Angular</th>
+        <th scope="col">HTML</th>
+        <th scope="col">CSS</th>
+        <th scope="col">BD</th>
         <th scope="col center">Atualização</th>
       </tr>
     </thead>
@@ -25,6 +31,12 @@
         <td>{{employee.phoneNumber}}</td>
         <td>{{employee.city}}</td>
         <td>{{employee.state}}</td>
+        <td>{{employee.shift}}</td>
+        <td>{{employee.habilityNode}}</td>
+        <td>{{employee.habilityAngular}}</td>
+        <td>{{employee.habilityHTML}}</td>
+        <td>{{employee.habilityCSS}}</td>
+        <td>{{employee.habilityBD}}</td>
         <td class="text-center edit-block">
           <span class="edit" [routerLink]="['/edit-employee/', employee._id]">
             <button type="button" class="btn btn-success btn-sm">Edit</button>

@@ -23,12 +23,12 @@ export class ApiService {
       )
   }
 
-  // Get all employees
+  // Get all dev
   getEmployees() {
     return this.http.get(`${this.baseUri}`);
   }
 
-  // Get employee
+  // Get dev
   getEmployee(id): Observable<any> {
     let url = `${this.baseUri}/read/${id}`;
     return this.http.get(url, {headers: this.headers}).pipe(
@@ -39,7 +39,7 @@ export class ApiService {
     )
   }
 
-  // Update employee
+  // Update dev
   updateEmployee(id, data): Observable<any> {
     let url = `${this.baseUri}/update/${id}`;
     return this.http.put(url, data, { headers: this.headers }).pipe(
@@ -47,7 +47,7 @@ export class ApiService {
     )
   }
 
-  // Delete employee
+  // Delete dev
   deleteEmployee(id): Observable<any> {
     let url = `${this.baseUri}/delete/${id}`;
     return this.http.delete(url, { headers: this.headers }).pipe(

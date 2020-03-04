@@ -15,15 +15,15 @@ export class DeveloperEditComponent implements OnInit {
   submitted = false;
   editForm: FormGroup;
   employeeForm: Employee[];
-  EmployeeShift:any = ['Manhã', 'Tarde', 'Noite']
-  
-  EmployeeHability:any = ['NodeJS', 'Angular', 'HTML', 'CSS', 'Banco de Dados']
+  EmployeeShift: any = ['Manhã', 'Tarde', 'Noite']
+  EmployeeHability: any = ['0', '1', '2', '3', '4', '5']
+
   constructor(
     public fb: FormBuilder,
     private actRoute: ActivatedRoute,
     private apiService: ApiService,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.updateEmployee();
@@ -37,12 +37,48 @@ export class DeveloperEditComponent implements OnInit {
       city: ['', [Validators.required]],
       state: ['', [Validators.required]],
       shift: ['', [Validators.required]],
+      habilityNode: ['', [Validators.required]],
+      habilityAngular: ['', [Validators.required]],
+      habilityHTML: ['', [Validators.required]],
+      habilityCSS: ['', [Validators.required]],
+      habilityBD: ['', [Validators.required]],
     })
   }
 
   // Choose options with select-dropdown
   updateProfile(e) {
     this.editForm.get('shift').setValue(e, {
+      onlySelf: true
+    })
+  }
+
+  // Choose habilityNode with select dropdown
+  updateNode(e) {
+    this.editForm.get('habilityNode').setValue(e, {
+      onlySelf: true
+    })
+  }
+  // Choose habilityAngular with select dropdown
+  updateAngular(e) {
+    this.editForm.get('habilityAngular').setValue(e, {
+      onlySelf: true
+    })
+  }
+  // Choose habilityHTML with select dropdown
+  updateHTML(e) {
+    this.editForm.get('habilityHTML').setValue(e, {
+      onlySelf: true
+    })
+  }
+  // Choose habilityCSS with select dropdown
+  updateCSS(e) {
+    this.editForm.get('habilityCSS').setValue(e, {
+      onlySelf: true
+    })
+  }
+  // Choose habilityBD with select dropdown
+  updateBD(e) {
+    this.editForm.get('habilityBD').setValue(e, {
       onlySelf: true
     })
   }
@@ -61,7 +97,12 @@ export class DeveloperEditComponent implements OnInit {
         linkedin: data['linkedin'],
         city: data['city'],
         state: data['state'],
-        shift: data['shi'],
+        shift: data['shift'],
+        habilityNode: data['habilityNode'],
+        habilityAngular: data['habilityAngular'],
+        habilityHTML: data['habilityHTML'],
+        habilityCSS: data['habilityCSS'],
+        habilityBD: data['habilityBD'],
       });
     });
   }
@@ -75,6 +116,11 @@ export class DeveloperEditComponent implements OnInit {
       city: ['', [Validators.required]],
       state: ['', [Validators.required]],
       shift: ['', [Validators.required]],
+      habilityNode: ['', [Validators.required]],
+      habilityAngular: ['', [Validators.required]],
+      habilityHTML: ['', [Validators.required]],
+      habilityCSS: ['', [Validators.required]],
+      habilityBD: ['', [Validators.required]],
     })
   }
 

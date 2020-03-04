@@ -6,4 +6,9 @@ export class Employee {
    city: string;
    state: string;
    shift: string;
+   habilityNode: string;
+   habilityAngular: string;
+   habilityHTML: string;
+   habilityCSS: string;
+   habilityBD: string;
 }

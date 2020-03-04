@@ -3,7 +3,7 @@
     <!-- form card register -->
     <div class="card card-outline-secondary">
       <div class="card-header">
-        <h3 class="mb-0">Edit Employee</h3>
+        <h3 class="mb-0">Editar Programador</h3>
       </div>
       <div class="card-body">
         <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
@@ -46,13 +46,13 @@
           <div class="form-group">
             <label for="inputPassword3">Em qual turno você estuda?</label>
             <select class="custom-select form-control" (change)="updateProfile($event.target.value)"
-              formControlName="designation">
+              formControlName="shift">
               <option value="">Escolha...</option>
               <option *ngFor="let employeeShift of EmployeeShift" value="{{employeeShift}}">{{employeeShift}}
               </option>
             </select>
             <!-- error -->
-            <div class="invalid-feedback" *ngIf="submitted && myForm.designation.errors?.required">
+            <div class="invalid-feedback" *ngIf="submitted && myForm.shift.errors?.required">
               Escolha o turno que você estuda
             </div>
           </div>
@@ -68,6 +68,58 @@
             <div class="invalid-feedback" *ngIf="submitted && myForm.phoneNumber.errors?.pattern">
               Informe apenas números
             </div>
+          </div>
+
+          <h5>Conhecimentos técnicos</h5>
+          <hr class="solid">
+          <div class="form-group">
+            <label for="inputPassword3">Qual seu conhecimento na tecnologia <strong>NodeJS</strong>?</label>
+            <select class="custom-select form-control" (change)="updateNode($event.target.value)"
+              formControlName="habilityNode">
+              <option value="">Escolha...</option>
+              <option *ngFor="let employeeHability of EmployeeHability" value="{{employeeHability}}">{{employeeHability}}
+              </option>
+            </select>
+          </div>
+  
+          <div class="form-group">
+            <label for="inputPassword3">Qual seu conhecimento na tecnologia <strong>Angular</strong>?</label>
+            <select class="custom-select form-control" (change)="updateAngular($event.target.value)"
+              formControlName="habilityAngular">
+              <option value="">Escolha...</option>
+              <option *ngFor="let employeeHability of EmployeeHability" value="{{employeeHability}}">{{employeeHability}}
+              </option>
+            </select>
+          </div>
+  
+          <div class="form-group">
+            <label for="inputPassword3">Qual seu conhecimento na tecnologia <strong>HTML</strong>?</label>
+            <select class="custom-select form-control" (change)="updateHTML($event.target.value)"
+              formControlName="habilityHTML">
+              <option value="">Escolha...</option>
+              <option *ngFor="let employeeHability of EmployeeHability" value="{{employeeHability}}">{{employeeHability}}
+              </option>
+            </select>
+          </div>
+  
+          <div class="form-group">
+            <label for="inputPassword3">Qual seu conhecimento na tecnologia <strong>CSS</strong>?</label>
+            <select class="custom-select form-control" (change)="updateCSS($event.target.value)"
+              formControlName="habilityCSS">
+              <option value="">Escolha...</option>
+              <option *ngFor="let employeeHability of EmployeeHability" value="{{employeeHability}}">{{employeeHability}}
+              </option>
+            </select>
+          </div>
+  
+          <div class="form-group">
+            <label for="inputPassword3">Qual seu conhecimento na tecnologia <strong>Banco de dados</strong>?</label>
+            <select class="custom-select form-control" (change)="updateBD($event.target.value)"
+              formControlName="habilityBD">
+              <option value="">Escolha...</option>
+              <option *ngFor="let employeeHability of EmployeeHability" value="{{employeeHability}}">{{employeeHability}}
+              </option>
+            </select>
           </div>
 
 

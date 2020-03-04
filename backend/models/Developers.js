@@ -23,7 +23,23 @@ let Developers = new Schema({
    },
    shift: {
       type: String,
-   }
+   },
+   habilityNode: {
+      type: Number,
+   },
+   habilityAngular: {
+      type: Number,
+   },
+   habilityHTML: {
+      type: Number,
+   },
+   habilityCSS: {
+      type: Number,
+   },
+
+   habilityBD: {
+      type: Number,
+   },
 }, {
    collection: 'developers'
 })
