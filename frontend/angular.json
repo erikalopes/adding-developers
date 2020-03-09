@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mean-stack-crud-app": {
+    "adding-developers": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -104,7 +104,7 @@
         }
       }
     },
-    "mean-stack-crud-app-e2e": {
+    "adding-developers-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
