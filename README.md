@@ -42,4 +42,4 @@ node server.js
 Pronto, agora é só abrir o link "localhost:4200" onde roda o servidor do Angular.
 
 
-
+**Observação: Nunca mexi diretamente com Angular, esse é o meu primeiro contato, tive e estou tendo bastante dificuldade para fazer o radio button (sempre que adicionava esse componente, a tela ficava em branco), então, até agora, deixei um select para substituir.**
