@@ -1,7 +1,7 @@
 # CRUD, Adicionando programadores - Afiliart
 
   -  A aplicação está dividida em 2 partes, frontend e backend.
-  - A aplicação permite cadastar, listar, atualizar e deletar programadores
+  - A aplicação permite cadastrar, listar, atualizar e deletar programadores
   - Usando AngularCLI, NodeJS, express e mongo.
 
 #### Importante
